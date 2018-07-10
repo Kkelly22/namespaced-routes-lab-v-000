@@ -8,6 +8,7 @@ class ArtistsController < ApplicationController
   end
 
   def new
+    binding.pry
     p = Preference.find(params[:id])
     if p.allow_create_artists == false
       redirect_to artists_path
